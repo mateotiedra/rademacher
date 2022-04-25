@@ -75,7 +75,10 @@ function TitleSection() {
 
 function WhoSection() {
   let images = [
-    { url: '/images/diploma.jpg', caption: "Diplôme d'école supérieur CFPT" },
+    {
+      url: '/images/diploma.jpg',
+      caption: "Diplôme d'école supérieur au CFPT",
+    },
   ];
 
   const openImage = (url) => {
