@@ -1,12 +1,13 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import { Typography, Box } from '@mui/material';
 
-import { Box } from '@mui/system';
-import { Typography } from '@mui/material';
+import Navbar from '../../components/Navbar/Navbar';
 import SectionDivider from '../../components/SectionDivider/SectionDivider';
 import SectionContainer from '../../components/SectionContainer/SectionContainer';
 import Footer from '../../components/Footer/Footer';
 import Carousel from '../../components/Carousel/Carousel';
+
+import { FiZoomIn } from 'react-icons/fi';
 
 // Import all the images
 import imgCarousel1 from '../../assets/images/carousel/1.jpg';
@@ -73,6 +74,15 @@ function TitleSection() {
 }
 
 function WhoSection() {
+  let images = [
+    { url: '/images/diploma.jpg', caption: "Diplôme d'école supérieur CFPT" },
+  ];
+
+  const openImage = (url) => {
+    console.log('heohui');
+    window.open(url);
+  };
+
   return (
     <>
       <SectionContainer>
@@ -90,6 +100,61 @@ function WhoSection() {
           matériels, qui m'intéressent tant par leur utilité que par leur
           fonctionnement.
         </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            width: '100%',
+            mt: 3,
+          }}
+        >
+          {images.map((image) => (
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+              }}
+            >
+              <Box
+                component={FiZoomIn}
+                color='black'
+                size={40}
+                sx={{
+                  position: 'absolute',
+                  right: 0,
+                  top: 0,
+                  m: 1,
+                  zIndex: 20,
+                }}
+              />
+              <Box
+                key='imageUrl'
+                component='img'
+                src={image.url}
+                sx={{
+                  width: 280,
+                  '&:hover': {
+                    cursor: 'zoom-in',
+                  },
+                }}
+                onClick={() => {
+                  openImage(image.url);
+                }}
+              />
+              <Typography
+                variant='caption'
+                sx={{
+                  color: 'text.secondary',
+                  mt: 1,
+                }}
+              >
+                {image.caption}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
       </SectionContainer>
       <SectionDivider />
     </>

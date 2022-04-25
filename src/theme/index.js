@@ -21,6 +21,8 @@ let theme = createTheme({
     },
   },
   typography: {
+    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+    fontSize: 16,
     h1: {
       fontFamily: '"Alfa Slab One", "Helvetica", "Arial", sans-serif',
       fontWeight: 400,
@@ -29,16 +31,14 @@ let theme = createTheme({
       fontFamily: '"Alfa Slab One", "Helvetica", "Arial", sans-serif',
       letterSpacing: 1.5,
     },
-    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-    fontSize: 16,
-    body1: {
-      fontWeight: 200,
+    h3: {
+      fontFamily: '"Alfa Slab One", "Helvetica", "Arial", sans-serif',
     },
     h4: {
       fontFamily: '"Alfa Slab One", "Helvetica", "Arial", sans-serif',
     },
-    h3: {
-      fontFamily: '"Alfa Slab One", "Helvetica", "Arial", sans-serif',
+    body1: {
+      fontWeight: 200,
     },
   },
 
