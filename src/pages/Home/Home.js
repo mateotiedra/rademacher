@@ -2,43 +2,79 @@ import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 
 import { Box } from '@mui/system';
-import imgCarousel1 from '../../assets/images/home-carousel-1.jpeg';
-import { Link, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import SectionDivider from '../../components/SectionDivider/SectionDivider';
 import SectionContainer from '../../components/SectionContainer/SectionContainer';
 import Footer from '../../components/Footer/Footer';
+import Carousel from '../../components/Carousel/Carousel';
 
-function Home() {
+// Import all the images
+import imgCarousel1 from '../../assets/images/carousel/1.jpg';
+import imgCarousel2 from '../../assets/images/carousel/2.jpg';
+import imgCarousel3 from '../../assets/images/carousel/3.jpg';
+import imgCarousel4 from '../../assets/images/carousel/4.jpg';
+import imgCarousel5 from '../../assets/images/carousel/5.jpg';
+import imgCarousel6 from '../../assets/images/carousel/6.jpg';
+import imgCarousel7 from '../../assets/images/carousel/7.jpg';
+import imgCarousel8 from '../../assets/images/carousel/8.jpg';
+import imgCarousel9 from '../../assets/images/carousel/9.jpg';
+import imgCarousel10 from '../../assets/images/carousel/10.jpg';
+import imgCarousel11 from '../../assets/images/carousel/11.jpg';
+
+function TitleSection() {
   return (
-    <>
-      <Navbar />
+    <Box
+      sx={{
+        width: '100%',
+        height: '65vh',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      <Carousel
+        imgComponents={[
+          imgCarousel1,
+          imgCarousel2,
+          imgCarousel3,
+          imgCarousel4,
+          imgCarousel5,
+          imgCarousel6,
+          imgCarousel7,
+          imgCarousel8,
+          imgCarousel9,
+          imgCarousel10,
+          imgCarousel11,
+        ]}
+        sx={{
+          position: 'absolute',
+          zIndex: 10,
+          height: '100%',
+          width: '100%',
+        }}
+      />
       <Box
         sx={{
+          position: 'absolute',
+          zIndex: 15,
+          height: '100%',
           width: '100%',
-          height: '65vh',
-          backgroundImage: `url(${imgCarousel1})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
+          backgroundColor: 'background.default',
+          opacity: 0.7,
         }}
-      >
-        <Box
-          sx={{
-            position: 'absolute',
-            zIndex: 10,
-            height: '100%',
-            width: '100%',
-            backgroundColor: 'background.default',
-            opacity: 0.7,
-          }}
-        />
-        <SectionContainer sx={{ zIndex: 15 }}>
-          <Typography variant='h1'>Audio électronique Rademacher</Typography>
-        </SectionContainer>
-      </Box>
-      <SectionDivider />
+      />
+      <SectionContainer sx={{ zIndex: 15 }}>
+        <Typography variant='h1'>Audio électronique Rademacher</Typography>
+      </SectionContainer>
+    </Box>
+  );
+}
+
+function WhoSection() {
+  return (
+    <>
       <SectionContainer>
         <Typography variant='h2' sx={{ mb: 3 }}>
           Qui suis-je ?
@@ -55,8 +91,14 @@ function Home() {
           fonctionnement.
         </Typography>
       </SectionContainer>
+      <SectionDivider />
+    </>
+  );
+}
 
-      <SectionDivider id='horaires' />
+function PurposeHowSection() {
+  return (
+    <>
       <SectionContainer>
         <Typography variant='h2' sx={{ mb: 3 }}>
           Quel est mon but ?
@@ -81,6 +123,20 @@ function Home() {
         </Typography>
       </SectionContainer>
       <SectionDivider />
+    </>
+  );
+}
+
+// Page starts here
+
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <TitleSection />
+      <SectionDivider />
+      <WhoSection />
+      <PurposeHowSection />
       <Footer />
     </>
   );

@@ -99,7 +99,7 @@ function Navbar(props) {
               display: { xs: 'none', sm: 'inline' },
             }}
           >
-            CTT Bernex
+            AER
           </Typography>
         </Link>
         {navLinksObj.map((linkObj) => {
