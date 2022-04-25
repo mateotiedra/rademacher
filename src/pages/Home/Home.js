@@ -26,7 +26,7 @@ function TitleSection() {
     <Box
       sx={{
         width: '100%',
-        height: '65vh',
+        height: '70vh',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative',
