@@ -82,7 +82,6 @@ function WhoSection() {
   ];
 
   const openImage = (url) => {
-    console.log('heohui');
     window.open(url);
   };
 
@@ -114,10 +113,16 @@ function WhoSection() {
         >
           {images.map((image) => (
             <Box
+              onClick={() => {
+                openImage(image.url);
+              }}
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
+                '&:hover': {
+                  cursor: 'zoom-in',
+                },
               }}
             >
               <Box
@@ -138,12 +143,6 @@ function WhoSection() {
                 src={image.url}
                 sx={{
                   width: 280,
-                  '&:hover': {
-                    cursor: 'zoom-in',
-                  },
-                }}
-                onClick={() => {
-                  openImage(image.url);
                 }}
               />
               <Typography

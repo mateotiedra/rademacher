@@ -88,19 +88,9 @@ function Navbar(props) {
           component={RouterLink}
           to='/'
         >
-          <Box sx={{ height: '55px', width: '55px' }}>
+          <Box sx={{ width: '55px', display: 'flex', alignItems: 'center' }}>
             <ClubLogo />
           </Box>
-          <Typography
-            variant='h4'
-            sx={{
-              textTransform: 'uppercase',
-              ml: 2,
-              display: { xs: 'none', sm: 'inline' },
-            }}
-          >
-            AER
-          </Typography>
         </Link>
         {navLinksObj.map((linkObj) => {
           return (
