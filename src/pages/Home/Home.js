@@ -94,12 +94,12 @@ function WhoSection() {
         <Typography variant='body1' textAlign='justify'>
           Je m'appelle Lucas Rademacher et je suis né en 1998 à Genève, ville
           dans laquelle j'habite depuis toujours. J'ai achevé ma formation en
-          génie électrique, spécialisation électronique, au Centre de
-          Professionnel et Technique en juin 2021, et je souhaite donc me lancer
-          mon compte. Depuis mon plus jeune âge, je suis passionné de musique ;
-          je suis guitariste depuis une dizaine d'années et, depuis peu,
-          ingénieur du son. Je suis donc souvent amené à me servir de divers
-          matériels, qui m'intéressent tant par leur utilité que par leur
+          génie électrique, spécialisation électronique, au Centre de Formation
+          Professionnelle et Technique en juin 2021, et je souhaite donc me
+          lancer mon compte. Depuis mon plus jeune âge, je suis passionné de
+          musique; je suis guitariste depuis une dizaine d'années et, depuis
+          peu, ingénieur du son. Je suis donc souvent amené à me servir de
+          divers matériels, qui m'intéressent tant par leur utilité que par leur
           fonctionnement.
         </Typography>
         <Box
@@ -185,7 +185,7 @@ function PurposeHowSection() {
         <Typography variant='body1' textAlign='justify'>
           Vous avez un appareil défectueux ? Prenez contact avec moi ! Les
           réparations se déroulent en deux temps : un devis est d'abord effectué
-          (50CHF), puis, après validation, j'effectue les réparations pour un
+          (50 CHF), puis, après validation, j'effectue les réparations pour un
           tarif de 50 CHF/heure.
         </Typography>
       </SectionContainer>

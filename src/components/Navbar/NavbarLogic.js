@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 const NavbarLogic = (props) => {
   const navLinksObj = [
-    { text: 'Acceuil', to: '/' },
-    { text: 'Mon actualité', to: '/actualite' },
+    { text: 'Accueil', to: '/' },
+    //{ text: 'Mon actualité', to: '/actualite' },
     { text: 'Contact', to: '/contact' },
   ];
   const [drawerOpened, setDrawerOpened] = useState(false);
