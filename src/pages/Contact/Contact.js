@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import SectionContainer from '../../components/SectionContainer/SectionContainer';
 import SectionDivider from '../../components/SectionDivider/SectionDivider';
 
-const emailAdress = 'audio.electronique@rademacher.lucas.ch';
+const emailAdress = 'contact@rademacher-lucas.ch';
 
 function TitleSection() {
   return (
@@ -81,7 +81,7 @@ function FloatingButton() {
         left: 'auto',
         position: 'fixed',
       }}
-      component={'a'}
+      component='a'
       href={'mailto:' + emailAdress}
     >
       Me contacter

@@ -79,6 +79,10 @@ function WhoSection() {
       url: '/images/diploma.jpg',
       caption: "Diplôme d'école supérieur au CFPT",
     },
+    {
+      url: '/images/lucas-rademacher.jpeg',
+      caption: 'Lucas Rademacher',
+    },
   ];
 
   const openImage = (url) => {
@@ -142,7 +146,7 @@ function WhoSection() {
                 component='img'
                 src={image.url}
                 sx={{
-                  width: 280,
+                  height: 400,
                 }}
               />
               <Typography
